@@ -40,7 +40,6 @@ class Eaf:
         author   -- The author used in the xml tag<br />
         """
         self.naiveGenAnn, self.naiveGenTS = False, False
-        now = localtime()
         self.annotationDocument = {
             'AUTHOR': author,
             'DATE': time.strftime("%Y-%m-%dT%H:%M:%S%z"),
@@ -154,7 +153,7 @@ class Eaf:
                      'mpeg': 'video/mpg', 'xml': 'text/xml'}
             mimetype = mimes[filePath.split('.')[-1]]
         self.media_descriptors.append({
-            'MEDIA_URL': filepath, 'RELATIVE_MEDIA_URL': relpath,
+            'MEDIA_URL': filePath, 'RELATIVE_MEDIA_URL': relpath,
             'MIME_TYPE': mimetype, 'TIME_ORIGIN': time_origin,
             'EXTRACTED_FROM': exfrom})
 
