@@ -675,7 +675,7 @@ class Eaf:
         cvEntries   -- Entries in the controlled vocabulary<br />
         cvId        -- Name of the controlled vocabulary<br />
         description -- Description"""
-        self.controlledvocabularies[cvId] = (description, cvEntries)
+        self.controlled_vocabularies[cvId] = (description, cvEntries)
 
     def getTierIdsForLinguisticType(self, lingType, parent=None):
         """
